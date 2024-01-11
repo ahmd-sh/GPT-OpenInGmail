@@ -1,0 +1,18 @@
+{
+    "schema_version": "v1",
+    "name_for_model": "OpenInGmail API",
+    "name_for_human": "OpenInGmail API",
+    "description_for_model": "Help creating a link to the GPT-generated email. Use it whenever the user types the command /oig.",
+    "description_for_human": "Easily open GPT written emails in Gmail.",
+    "auth": {
+      "type": "none"
+    },
+    "api": {
+      "type": "openapi",
+      "url": "https://your-app-url.com/.well-known/openapi.yaml",
+      "has_user_authentication": false
+    },
+    "logo_url": "https://ahmd.sh",
+    "contact_email": "ahmeds@mun.ca", 
+    "legal_info_url": "https://ahmd.sh/legal"
+  }

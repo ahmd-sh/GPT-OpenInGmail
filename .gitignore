@@ -1,0 +1,12 @@
+node_modules
+*.log*
+.nitro
+.cache
+.output
+.env
+dist
+.DS_Store
+package-lock.json
+.editorconfig
+.eslintignore
+.eslintrc
