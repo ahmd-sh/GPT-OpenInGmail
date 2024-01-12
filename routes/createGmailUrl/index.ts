@@ -1,9 +1,10 @@
 export default eventHandler((event) => {
-  const { subjectLine, emailBody } = event.context.params;
+  const subjectLine = getQuery(event).subjectLine;
+  const emailBody = getQuery(event).emailBody;
 
   // Ensure inputs are URL-safe
-  const encodedSubject = encodeURIComponent(subjectLine);
-  const encodedBody = encodeURIComponent(emailBody);
+  const encodedSubject = encodeURIComponent(subjectLine.toString());
+  const encodedBody = encodeURIComponent(emailBody.toString());
 
   const oigUrl = `https://mail.google.com/mail/u/0/?tf=cm&fs=0&su=${encodedSubject}&body=${encodedBody}`;
 
