@@ -1,6 +1,6 @@
 export default eventHandler((event) => {
-  const subjectLine = getQuery(event).subjectLine;
-  const emailBody = getQuery(event).emailBody;
+  const subjectLine = getQuery(event).subjectLine || "undefinedSubject";
+  const emailBody = getQuery(event).emailBody || "undefinedBody";
 
   // Ensure inputs are URL-safe
   const encodedSubject = encodeURIComponent(subjectLine.toString());
