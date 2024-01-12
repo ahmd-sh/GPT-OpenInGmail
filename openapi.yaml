@@ -1,0 +1,46 @@
+openapi: 3.0.0
+info:
+  title: Open In Gmail API
+  version: 1.0.0
+  description: An API to create URLs for composing Gmail messages.
+servers:
+  - url: https://your-api-server.com
+paths:
+  /gpt:
+    get:
+      summary: Create a Gmail compose URL
+      description: Returns a URL for composing a Gmail message with a specified subject and body.
+      parameters:
+        - name: subjectLine
+          in: query
+          required: true
+          schema:
+            type: string
+          description: The subject line of the email.
+        - name: emailBody
+          in: query
+          required: true
+          schema:
+            type: string
+          description: The body of the email.
+      responses:
+        "200":
+          description: Successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+  /:
+    get:
+      summary: "Root Endpoint"
+      description: "Returns a simple greeting message."
+      responses:
+        200:
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                properties:
+                  as_salaam:
+                    type: "string"
