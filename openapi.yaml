@@ -6,8 +6,9 @@ info:
 servers:
   - url: https://gpt-open-in-gmail.vercel.app
 paths:
-  /gpt:
+  /createGmailUrl:
     get:
+      operationId: "createGmailComposeUrl"
       summary: Create a Gmail compose URL
       description: Returns a URL for composing a Gmail message with a specified subject and body.
       parameters:

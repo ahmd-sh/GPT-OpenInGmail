@@ -7,5 +7,8 @@ export default eventHandler((event) => {
 
   const oigUrl = `https://mail.google.com/mail/u/0/?tf=cm&fs=0&su=${encodedSubject}&body=${encodedBody}`;
 
-  return `[Open in Gmail](${oigUrl})`;
+  return {
+    operationId: "createGmailComposeUrl",
+    result: `[Open in Gmail](${oigUrl})`,
+  };
 });
