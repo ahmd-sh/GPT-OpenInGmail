@@ -1,3 +1,3 @@
 export default eventHandler(() => {
-  return { as_salaam: "alaikum" };
+  return { as_salaam: "alaikum wr wb" };
 });
