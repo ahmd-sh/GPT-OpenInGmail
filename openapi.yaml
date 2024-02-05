@@ -24,6 +24,15 @@ paths:
           schema:
             type: string
           description: The body of the email.
+        - name: accountId
+          in: query
+          required: false
+          schema:
+            type: integer
+            default: 0
+            minimum: 0
+            maximum: 100
+          description: The account ID for the Gmail account, ranging from 0 to 100. Defaults to 0 if not provided or invalid.
       responses:
         "200":
           description: Successful response
