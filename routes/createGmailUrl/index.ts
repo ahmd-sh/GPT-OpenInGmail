@@ -1,7 +1,12 @@
 export default eventHandler((event) => {
   const subjectLine = getQuery(event).subjectLine || "undefinedSubject";
   const emailBody = getQuery(event).emailBody || "undefinedBody";
-  const accountId = getQuery(event).emailBody || 0;
+  let accountId = parseInt(getQuery(event).accountId) || 0;
+
+  // Check if conversion failed or if accountId is out of range, then default to 0
+  if (isNaN(accountId) || accountId < 0 || accountId > 100) {
+    accountId = 0;
+  }
 
   // Ensure inputs are URL-safe
   const encodedSubject = encodeURIComponent(subjectLine.toString());
