@@ -1,3 +1,6 @@
+# Open in Gmail GPT
+[Add it to your ChatGPT here](https://chat.openai.com/g/g-HO03hMhJF-open-in-gemail)
+
 # Nitro Minimal Starter
 
 Look at the [Nitro documentation](https://nitro.unjs.io/) to learn more.
